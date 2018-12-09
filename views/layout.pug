@@ -1,0 +1,17 @@
+//- layout.pug
+doctype html
+html(lang='es')
+  include includes/head.pug
+
+  body
+    include includes/navbar.pug
+    
+    .container
+      block content
+
+      // Footer
+      include includes/footer.pug
+
+    // Logout Modal
+    include includes/js-footer.pug
+

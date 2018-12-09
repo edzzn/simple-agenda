@@ -1,0 +1,16 @@
+//- perfil.pug
+extends layout
+
+block content
+  h2 Editar persona:
+  form(action="/editar", method="post")
+    .form-group
+      label(for='nombre') Nombre
+      input#nombre.form-control(type='text', placeholder='Nombre')
+    .form-group
+      label(for='apellido') Apellido
+      input#apellido.form-control(type='text', placeholder='Apellido')
+    .form-group
+      label(for='telefono') Teléfono
+      input#telefono.form-control(type='tel', placeholder='Teléfono')
+    button.btn.btn-primary(type='submit') Editar

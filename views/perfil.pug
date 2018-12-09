@@ -1,0 +1,26 @@
+//- perfil.pug
+extends layout
+
+block content
+  h2 Juan Perez:
+  table.table.mt-3
+    tbody
+      tr
+        th(scope='row') Nombre
+        td Juan
+      tr
+        th(scope='row') Apellido
+        td Thornton
+      tr
+        th(scope='row') Teléfono
+        td 0947531628
+      tr
+        th(scope='row') Acciones
+        td
+          .btn-group(role='group')
+            a.btn.btn-warning(href='/editar')
+              i.fas.fa-user-edit
+              |  Editar
+            a.btn.btn-danger(href='/eliminar')
+              i.fas.fa-user-edit
+              |  Eliminar
