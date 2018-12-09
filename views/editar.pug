@@ -3,14 +3,14 @@ extends layout
 
 block content
   h2 Editar persona:
-  form(action="/editar", method="post")
+  form(action="/editar/" + persona.id, method="post")
     .form-group
       label(for='nombre') Nombre
-      input#nombre.form-control(type='text', placeholder='Nombre')
+      input#nombre.form-control(type='text', name='nombres' placeholder='Nombre', value=persona.nombres)
     .form-group
       label(for='apellido') Apellido
-      input#apellido.form-control(type='text', placeholder='Apellido')
+      input#apellido.form-control(type='text', nombres='apellidos' placeholder='Apellido', value=persona.apellidos)
     .form-group
       label(for='telefono') Teléfono
-      input#telefono.form-control(type='tel', placeholder='Teléfono')
+      input#telefono.form-control(type='tel', nombres='teléfono' placeholder='Teléfono', value=persona.telefono)
     button.btn.btn-primary(type='submit') Editar

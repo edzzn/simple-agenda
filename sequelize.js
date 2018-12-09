@@ -14,7 +14,7 @@ const Persona = PersonaModel(sequelize, Sequelize)
 
 sequelize.sync({ force: false })
   .then(() => {
-    console.log(`Database & tables created!`)
+    console.log(`¡Tablas creadas!`)
   })
 
 module.exports = {

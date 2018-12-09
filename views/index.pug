@@ -5,8 +5,8 @@ block content
   h2 Personas:
   .btn-group.float-right.mb-5(role='group')
     a.btn.btn-primary.btn-md(href='/nuevo')
-      i.fa.fa-plus
-      |  Nueva Persona
+      i.fa.fa-plus Nueva Persona
+  
   table.table.mt-3
     thead
       tr
@@ -16,83 +16,20 @@ block content
         th(scope='col') Teléfono
         th(scope='col') Acciones
     tbody
-      tr
-        th(scope='row') 1
-        td Mark
-        td Otto
-        td 0947531628
-        td
-          .btn-group(role='group')
-            a.btn.btn-primary(href='/perfil')
-              i.fas.fa-eye
-              |  Ver
-            a.btn.btn-warning(href='/editar')
-              i.fas.fa-user-edit
-              |  Editar
-            a.btn.btn-danger(href='/eliminar')
-              i.fas.fa-user-edit
-              |  Eliminar
-      tr
-        th(scope='row') 2
-        td Jacob
-        td Thornton
-        td 0947531628
-        td
-          .btn-group(role='group')
-            a.btn.btn-primary(href='/perfil')
-              i.fas.fa-eye
-              |  Ver
-            a.btn.btn-warning(href='/editar')
-              i.fas.fa-user-edit
-              |  Editar
-            a.btn.btn-danger(href='/eliminar')
-              i.fas.fa-user-edit
-              |  Eliminar
-      tr
-        th(scope='row') 3
-        td Larry
-        td the Bird
-        td 0947531628
-        td
-          .btn-group(role='group')
-            a.btn.btn-primary(href='/perfil')
-              i.fas.fa-eye
-              |  Ver
-            a.btn.btn-warning(href='/editar')
-              i.fas.fa-user-edit
-              |  Editar
-            a.btn.btn-danger(href='/eliminar')
-              i.fas.fa-user-edit
-              |  Eliminar
-      tr
-        th(scope='row') 4
-        td Larry
-        td the Bird
-        td 0947531628
-        td
-          .btn-group(role='group')
-            a.btn.btn-primary(href='/perfil')
-              i.fas.fa-eye
-              |  Ver
-            a.btn.btn-warning(href='/editar')
-              i.fas.fa-user-edit
-              |  Editar
-            a.btn.btn-danger(href='/eliminar')
-              i.fas.fa-user-edit
-              |  Eliminar
-      tr
-        th(scope='row') 5
-        td Larry
-        td the Bird
-        td 0947531628
-        td
-          .btn-group(role='group')
-            a.btn.btn-primary(href='/perfil')
-              i.fas.fa-eye
-              |  Ver
-            a.btn.btn-warning(href='/editar')
-              i.fas.fa-user-edit
-              |  Editar
-            a.btn.btn-danger(href='/eliminar')
-              i.fas.fa-user-edit
-              |  Eliminar
+      each persona in personas
+        tr
+          th(scope='row')= persona.id
+          td= persona.nombres
+          td= persona.apellidos
+          td= persona.telefono
+          td
+            .btn-group(role='group')
+              a.btn.btn-primary(href='/perfil/' + persona.id)
+                i.fas.fa-eye
+                |  Ver
+              a.btn.btn-warning(href='/editar/' + persona.id)
+                i.fas.fa-user-edit
+                |  Editar
+              a.btn.btn-danger(href='/eliminar/' + persona.id )
+                i.fas.fa-user-edit
+                |  Eliminar

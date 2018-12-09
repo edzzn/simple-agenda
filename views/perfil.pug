@@ -2,25 +2,25 @@
 extends layout
 
 block content
-  h2 Juan Perez:
+  h2 #{persona.nombres} #{persona.apellidos}:
   table.table.mt-3
     tbody
       tr
         th(scope='row') Nombre
-        td Juan
+        td= persona.nombres
       tr
         th(scope='row') Apellido
-        td Thornton
+        td= persona.apellidos
       tr
         th(scope='row') Teléfono
-        td 0947531628
+        td= persona.telefono
       tr
         th(scope='row') Acciones
         td
           .btn-group(role='group')
-            a.btn.btn-warning(href='/editar')
+            a.btn.btn-warning(href='/editar/' + persona.id)
               i.fas.fa-user-edit
               |  Editar
-            a.btn.btn-danger(href='/eliminar')
+            a.btn.btn-danger(href='/eliminar/' + persona.id)
               i.fas.fa-user-edit
               |  Eliminar
